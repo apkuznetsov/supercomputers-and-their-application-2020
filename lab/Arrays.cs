@@ -36,5 +36,19 @@ namespace lab
 
             return resArr;
         }
+
+        public static int[,] Transpose(int[,] arr)
+        {
+            int rows = arr.GetLength(0);
+            int cols = arr.GetLength(1);
+
+            int[,] newArr = new int[cols, rows];
+
+            for (int y = 0; y < rows; y++)
+                for (int x = 0; x < cols; x++)
+                    newArr[y, x] = arr[x, y];
+
+            return newArr;
+        }
     }
 }
