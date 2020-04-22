@@ -7,6 +7,7 @@ namespace lab
         static void Main(string[] args)
         {
             TestingClassicMethod();
+            TestingTransposeMethod();
         }
         }
 
@@ -21,7 +22,17 @@ namespace lab
                     "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
         }
 
+        private static void TestingTransposeMethod()
+        {
+            Console.WriteLine("КЛАССИЧЕСКОЕ ПЕРЕМНОЖЕНИЕ С ТРАНСПОНИРОВАНИЕМ:\n");
+
+            double[] resultsInSecs = Tests.TestTransposeMethod(Tests.TestArrSizes);
+            for (int index = 0; index < Tests.TestArrSizes.Length; index++)
+                Console.WriteLine("измерение " + index + "\n" +
+                    "размер матрицы = " + Tests.TestArrSizes[index] + "\n" +
+                    "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
         }
+
         }
     }
 }
