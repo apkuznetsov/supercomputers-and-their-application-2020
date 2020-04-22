@@ -1,12 +1,26 @@
-﻿using System;
+using System;
 
 namespace lab
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TestingClassicMethod();
+        }
+        }
+
+        private static void TestingClassicMethod()
+        {
+            Console.WriteLine("КЛАССИЧЕСКОЕ ПЕРЕМНОЖЕНИЕ:");
+
+            double[] resultsInSecs = Tests.TestClassicMethod(Tests.TestArrSizes);
+            for (int index = 0; index < Tests.TestArrSizes.Length; index++)
+                Console.WriteLine("измерение " + index + " ... " + 
+                    "размер матрицы = " + Tests.TestArrSizes[index] + " ... " + 
+                    "длительность расчёта (сек.) = " + resultsInSecs[index]);
+
+        }
         }
     }
 }
