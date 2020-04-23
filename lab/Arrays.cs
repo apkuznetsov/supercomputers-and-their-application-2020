@@ -4,9 +4,22 @@ namespace lab
 {
     public class Arrays
     {
-        public static int[,] CreateRandNumsArr(int rowsNum, int colsNum)
+        public static int[,] CreateRandNumsIntArr(int rowsNum, int colsNum)
         {
             int[,] arr = new int[rowsNum, colsNum];
+
+            Random rand = new Random();
+
+            for (int y = 0; y < rowsNum; y++)
+                for (int x = 0; x < colsNum; x++)
+                    arr[y, x] = rand.Next();
+
+            return arr;
+        }
+
+        public static double[,] CreateRandNumsDoubleArr(int rowsNum, int colsNum)
+        {
+            double[,] arr = new double[rowsNum, colsNum];
 
             Random rand = new Random();
 

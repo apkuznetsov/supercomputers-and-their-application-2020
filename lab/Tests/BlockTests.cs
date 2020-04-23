@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 
 namespace lab.Tests
 {
@@ -10,8 +10,8 @@ namespace lab.Tests
 
             for (int index = 0; index < testBlockSizes.Length; index++)
             {
-                int[,] arr1 = Arrays.CreateRandNumsArr(testArrSize, testArrSize);
-                int[,] arr2 = Arrays.CreateRandNumsArr(testArrSize, testArrSize);
+                int[,] arr1 = Arrays.CreateRandNumsIntArr(testArrSize, testArrSize);
+                int[,] arr2 = Arrays.CreateRandNumsIntArr(testArrSize, testArrSize);
 
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
