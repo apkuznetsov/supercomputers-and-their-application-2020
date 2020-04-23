@@ -1,35 +1,35 @@
 ﻿namespace lab
 {
-    public class DoubleBlockArrays
+    public class FloatBlockArrays
     {
-        public static double[,] MultByBlockMethod(double[,] a, double[,] b, int blockSize, int currBlockSize, int startRowA, int startColA, int startRowB, int startColB)
+        public static float[,] MultByBlockMethod(float[,] a, float[,] b, int blockSize, int currBlockSize, int startRowA, int startColA, int startRowB, int startColB)
         {
             if (blockSize == currBlockSize)
                 return MultByClassicMethod(a, b, currBlockSize, startRowA, startColA, startRowB, startColB);
 
             int newBlockSize = currBlockSize / 2;
-            double[,] c11 = SumBlockSizeSquareArrs(
+            float[,] c11 = SumBlockSizeSquareArrs(
                 MultByBlockMethod(a, b, blockSize, newBlockSize, startRowA, startColA, startRowB, startColB),
                 MultByBlockMethod(a, b, blockSize, newBlockSize, startRowA, startColA + newBlockSize, startRowB + newBlockSize, startColB));
 
-            double[,] c12 = SumBlockSizeSquareArrs(
+            float[,] c12 = SumBlockSizeSquareArrs(
                 MultByBlockMethod(a, b, blockSize, newBlockSize, startRowA, startColA, startRowB, startColB + newBlockSize),
                 MultByBlockMethod(a, b, blockSize, newBlockSize, startRowA, startColA + newBlockSize, startRowB + newBlockSize, startColB + newBlockSize));
 
-            double[,] c21 = SumBlockSizeSquareArrs(
+            float[,] c21 = SumBlockSizeSquareArrs(
                 MultByBlockMethod(a, b, blockSize, newBlockSize, startRowA + newBlockSize, startColA, startRowB, startColB),
                 MultByBlockMethod(a, b, blockSize, newBlockSize, startRowA + newBlockSize, startColA + newBlockSize, startRowB + newBlockSize, startColB));
 
-            double[,] c22 = SumBlockSizeSquareArrs(
+            float[,] c22 = SumBlockSizeSquareArrs(
                 MultByBlockMethod(a, b, blockSize, newBlockSize, startRowA + newBlockSize, startColA, startRowB, startColB + newBlockSize),
                 MultByBlockMethod(a, b, blockSize, newBlockSize, startRowA + newBlockSize, startColA + newBlockSize, startRowB + newBlockSize, startColB + newBlockSize));
 
             return JoinBlockSizeSquareArr(c11, c12, c21, c22);
         }
 
-        private static double[,] MultByClassicMethod(double[,] a, double[,] b, int blockSize, int startRowA, int startColA, int startRowB, int startColB)
+        private static float[,] MultByClassicMethod(float[,] a, float[,] b, int blockSize, int startRowA, int startColA, int startRowB, int startColB)
         {
-            double[,] c = new double[blockSize, blockSize];
+            float[,] c = new float[blockSize, blockSize];
 
             for (int y = 0; y < blockSize; y++)
                 for (int x = 0; x < blockSize; x++)
@@ -43,10 +43,10 @@
             return c;
         }
 
-        private static double[,] SumBlockSizeSquareArrs(double[,] a, double[,] b)
+        private static float[,] SumBlockSizeSquareArrs(float[,] a, float[,] b)
         {
             int blockSize = a.GetLength(0);
-            double[,] c = new double[blockSize, blockSize];
+            float[,] c = new float[blockSize, blockSize];
 
             for (int y = 0; y < blockSize; y++)
                 for (int x = 0; x < blockSize; x++)
@@ -55,10 +55,10 @@
             return c;
         }
 
-        private static double[,] JoinBlockSizeSquareArr(double[,] c11, double[,] c12, double[,] c21, double[,] c22)
+        private static float[,] JoinBlockSizeSquareArr(float[,] c11, float[,] c12, float[,] c21, float[,] c22)
         {
             int blockSize = c11.GetLength(0) * 2;
-            double[,] c = new double[blockSize, blockSize];
+            float[,] c = new float[blockSize, blockSize];
 
             for (int y = 0; y < blockSize; y++)
                 for (int x = 0; x < blockSize; x++)
