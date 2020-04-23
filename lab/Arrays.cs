@@ -39,13 +39,14 @@ namespace lab
 
         public static void Transpose(int[,] arr)
         {
-            for (int i = 1; i < arr.Length; i++)
+            int temp;
+            for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < i; j++)
                 {
-                    arr[i, j] ^= arr[j, i];
-                    arr[j, i] ^= arr[i, j];
-                    arr[i, j] ^= arr[j, i];
+                    temp = arr[i, j];
+                    arr[i, j] = arr[j, i];
+                    arr[j, i] = temp;
                 }
             }
         }
