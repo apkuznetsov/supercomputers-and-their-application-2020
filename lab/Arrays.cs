@@ -30,6 +30,19 @@ namespace lab
             return arr;
         }
 
+        public static float[,] CreateRandNumsFloatArr(int rowsNum, int colsNum)
+        {
+            float[,] arr = new float[rowsNum, colsNum];
+
+            Random rand = new Random();
+
+            for (int y = 0; y < rowsNum; y++)
+                for (int x = 0; x < colsNum; x++)
+                    arr[y, x] = rand.Next();
+
+            return arr;
+        }
+
         public static int[,] MultByClassicMethod(int[,] arr1, int[,] arr2)
         {
             int rowsNumArr1 = arr1.GetLength(0);
