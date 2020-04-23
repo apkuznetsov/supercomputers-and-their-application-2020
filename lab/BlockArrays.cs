@@ -27,6 +27,30 @@ namespace lab
                 for (int x = 0; x < blockSize; x++)
                     c[y, x] = a[y, x] + b[y, x];
 
+        private static int[,] JoinBlockSizeSquareArr(int[,] c11, int[,] c12, int[,] c21, int[,] c22)
+        {
+            int blockSize = c11.GetLength(0) * 2;
+            int[,] c = new int[blockSize, blockSize];
+
+            for (int y = 0; y < blockSize; y++)
+                for (int x = 0; x < blockSize; x++)
+                    if (y < blockSize / 2)
+                    {
+                        if (x < blockSize / 2)
+                            c[y, x] = c11[y, x];
+                        else
+                            c[y, x] = c12[y, x - blockSize / 2];
+                    }
+                    else
+                    {
+                        if (x < blockSize / 2)
+                            c[y, x] = c21[y - blockSize / 2, x];
+
+                        else
+                            c[y, x] = c22[y - blockSize / 2, x - blockSize / 2];
+                    }
+
             return c;
     }
+}
 }
