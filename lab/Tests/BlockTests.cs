@@ -32,8 +32,8 @@ namespace lab.Tests
 
             for (int index = 0; index < testBlockSizes.Length; index++)
             {
-                double[,] arr1 = Arrays.CreateRandNumsIntArr(testArrSize, testArrSize);
-                double[,] arr2 = Arrays.CreateRandNumsIntArr(testArrSize, testArrSize);
+                double[,] arr1 = Arrays.CreateRandNumsDoubleArr(testArrSize, testArrSize);
+                double[,] arr2 = Arrays.CreateRandNumsDoubleArr(testArrSize, testArrSize);
 
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
