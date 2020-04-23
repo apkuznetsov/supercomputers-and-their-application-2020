@@ -1,4 +1,4 @@
-﻿namespace lab
+namespace lab
 {
     public class BlockArrays
     {
@@ -18,6 +18,15 @@
             return c;
         }
 
+        private static int[,] SumSquareArrs(int[,] a, int[,] b)
+        {
+            int blockSize = a.GetLength(0);
+            int[,] c = new int[blockSize, blockSize];
         
+            for (int y = 0; y < blockSize; y++)
+                for (int x = 0; x < blockSize; x++)
+                    c[y, x] = a[y, x] + b[y, x];
+
+            return c;
     }
 }
