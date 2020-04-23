@@ -12,8 +12,8 @@ namespace lab
 
             for (int index = 0; index < testArrSizes.Length; index++)
             {
-                int[,] arr1 = Arrays.CreateRandNumsArr(testArrSizes[index], testArrSizes[index]);
-                int[,] arr2 = Arrays.CreateRandNumsArr(testArrSizes[index], testArrSizes[index]);
+                int[,] arr1 = Arrays.CreateRandNumsIntArr(testArrSizes[index], testArrSizes[index]);
+                int[,] arr2 = Arrays.CreateRandNumsIntArr(testArrSizes[index], testArrSizes[index]);
 
                 Stopwatch stopwatchForClassic = new Stopwatch();
                 stopwatchForClassic.Start();
@@ -32,8 +32,8 @@ namespace lab
 
             for (int index = 0; index < testArrSizes.Length; index++)
             {
-                int[,] arr1 = Arrays.CreateRandNumsArr(testArrSizes[index], testArrSizes[index]);
-                int[,] arr2 = Arrays.CreateRandNumsArr(testArrSizes[index], testArrSizes[index]);
+                int[,] arr1 = Arrays.CreateRandNumsIntArr(testArrSizes[index], testArrSizes[index]);
+                int[,] arr2 = Arrays.CreateRandNumsIntArr(testArrSizes[index], testArrSizes[index]);
 
                 Stopwatch stopwatchForClassic = new Stopwatch();
                 stopwatchForClassic.Start();
@@ -44,28 +44,6 @@ namespace lab
                 stopwatchForClassic.Stop();
 
                 resultsInSecs[index] = stopwatchForClassic.Elapsed.TotalSeconds;
-            }
-
-            return resultsInSecs;
-        }
-
-        public static double[] TestBlockMethod(int testArrSize, int[] testBlockSizes)
-        {
-            double[] resultsInSecs = new double[testBlockSizes.Length];
-
-            for (int index = 0; index < testBlockSizes.Length; index++)
-            {
-                int[,] arr1 = Arrays.CreateRandNumsArr(testArrSize, testArrSize);
-                int[,] arr2 = Arrays.CreateRandNumsArr(testArrSize, testArrSize);
-
-                Stopwatch stopwatch = new Stopwatch();
-                stopwatch.Start();
-
-                IntBlockArrays.MultByBlockMethod(arr1, arr2, testBlockSizes[index], arr1.GetLength(0), 0, 0, 0, 0);
-
-                stopwatch.Stop();
-
-                resultsInSecs[index] = stopwatch.Elapsed.TotalSeconds;
             }
 
             return resultsInSecs;
