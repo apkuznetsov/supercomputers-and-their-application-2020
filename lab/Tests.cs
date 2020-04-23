@@ -4,7 +4,7 @@ namespace lab
 {
     public class Tests
     {
-        public static readonly int[] TestArrSizes = { 32, 64, 128, 256, 512, 1024 };
+        public static readonly int[] TestArrSizes = { 32, 64, 128, 256, 512, 1024, 2048};
 
         public static double[] TestClassicMethod(int[] testArrSizes)
         {
