@@ -7,9 +7,12 @@ namespace lab
     {
         static void Main(string[] args)
         {
-            TestingClassicMethod();
-            TestingTransposeMethod();
-            //TestingBlockMethod();
+            //TestingClassicMethod();
+            //TestingTransposeMethod();
+
+            //TestingIntBlockMethod();
+            //TestingDoubleBlockMethod();
+            //TestingFloatBlockMethod();
 
             Console.ReadKey();
         }
