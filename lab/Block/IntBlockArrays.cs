@@ -1,6 +1,6 @@
 ﻿namespace lab
 {
-    public class BlockArrays
+    public class IntBlockArrays
     {
         public static int[,] MultByBlockMethod(int[,] a, int[,] b, int blockSize, int currBlockSize, int startRowA, int startColA, int startRowB, int startColB)
         {

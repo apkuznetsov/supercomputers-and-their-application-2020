@@ -61,7 +61,7 @@ namespace lab
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
 
-                BlockArrays.MultByBlockMethod(arr1, arr2, testBlockSizes[index], arr1.GetLength(0), 0, 0, 0, 0);
+                IntBlockArrays.MultByBlockMethod(arr1, arr2, testBlockSizes[index], arr1.GetLength(0), 0, 0, 0, 0);
 
                 stopwatch.Stop();
 
