@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace lab
 {
@@ -17,10 +17,10 @@ namespace lab
         {
             Console.WriteLine("КЛАССИЧЕСКОЕ ПЕРЕМНОЖЕНИЕ:\n");
 
-            double[] resultsInSecs = Tests.TestClassicMethod(Tests.TestArrSizes);
-            for (int index = 0; index < Tests.TestArrSizes.Length; index++)
+            double[] resultsInSecs = Tests.Tests.TestClassicMethod(Tests.Tests.TestArrSizes);
+            for (int index = 0; index < Tests.Tests.TestArrSizes.Length; index++)
                 Console.WriteLine("измерение " + index + "\n" +
-                    "размер матрицы = " + Tests.TestArrSizes[index] + "\n" +
+                    "размер матрицы = " + Tests.Tests.TestArrSizes[index] + "\n" +
                     "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
         }
 
@@ -28,10 +28,10 @@ namespace lab
         {
             Console.WriteLine("КЛАССИЧЕСКОЕ ПЕРЕМНОЖЕНИЕ С ТРАНСПОНИРОВАНИЕМ:\n");
 
-            double[] resultsInSecs = Tests.TestTransposeMethod(Tests.TestArrSizes);
-            for (int index = 0; index < Tests.TestArrSizes.Length; index++)
+            double[] resultsInSecs = Tests.Tests.TestTransposeMethod(Tests.Tests.TestArrSizes);
+            for (int index = 0; index < Tests.Tests.TestArrSizes.Length; index++)
                 Console.WriteLine("измерение " + index + "\n" +
-                    "размер матрицы = " + Tests.TestArrSizes[index] + "\n" +
+                    "размер матрицы = " + Tests.Tests.TestArrSizes[index] + "\n" +
                     "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
         }
 
@@ -41,10 +41,10 @@ namespace lab
 
             Console.WriteLine("БЛОЧНОЕ ПЕРЕМНОЖЕНИЕ ДЛЯ БЛОКА РАЗМЕРОМ " + blockSize + ":\n");
 
-            double[] resultsInSecs = Tests.TestBlockMethod(blockSize, Tests.TestArrSizes);
-            for (int index = 0; index < Tests.TestArrSizes.Length; index++)
+            double[] resultsInSecs = Tests.Tests.TestBlockMethod(blockSize, Tests.Tests.TestArrSizes);
+            for (int index = 0; index < Tests.Tests.TestArrSizes.Length; index++)
                 Console.WriteLine("измерение " + index + "\n" +
-                    "размер матрицы = " + Tests.TestArrSizes[index] + "\n" +
+                    "размер матрицы = " + Tests.Tests.TestArrSizes[index] + "\n" +
                     "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
         }
     }
