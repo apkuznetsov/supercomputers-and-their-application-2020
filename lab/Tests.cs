@@ -33,11 +33,12 @@ namespace lab
             for (int index = 0; index < testArrSizes.Length; index++)
             {
                 int[,] arr1 = Arrays.CreateRandNumsArr(testArrSizes[index], testArrSizes[index]);
-                int[,] arr2 = Arrays.Transpose(Arrays.CreateRandNumsArr(testArrSizes[index], testArrSizes[index]));
+                int[,] arr2 = Arrays.CreateRandNumsArr(testArrSizes[index], testArrSizes[index]);
 
                 Stopwatch stopwatchForClassic = new Stopwatch();
                 stopwatchForClassic.Start();
 
+                Arrays.Transpose(arr2);
                 Arrays.MultByClassicMethod(arr1, arr2);
 
                 stopwatchForClassic.Stop();
