@@ -1,3 +1,4 @@
+using lab.Tests;
 using System;
 
 namespace lab
@@ -35,16 +36,16 @@ namespace lab
                     "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
         }
 
-        private static void TestingBlockMethod()
+        private static void TestingIntBlockMethod()
         {
             const int blockSize = 1024;
 
-            Console.WriteLine("БЛОЧНОЕ ПЕРЕМНОЖЕНИЕ ДЛЯ БЛОКА РАЗМЕРОМ " + blockSize + ":\n");
+            Console.WriteLine("INTEGER -- БЛОЧНОЕ ПЕРЕМНОЖЕНИЕ ДЛЯ БЛОКА РАЗМЕРОМ " + blockSize + ":\n");
 
-            double[] resultsInSecs = Tests.Tests.TestBlockMethod(blockSize, Tests.Tests.TestArrSizes);
-            for (int index = 0; index < Tests.Tests.TestArrSizes.Length; index++)
+            double[] resultsInSecs = BlockTests.TestIntBlockMethod(blockSize, BlockTests.TestArrSizes);
+            for (int index = 0; index < BlockTests.TestArrSizes.Length; index++)
                 Console.WriteLine("измерение " + index + "\n" +
-                    "размер матрицы = " + Tests.Tests.TestArrSizes[index] + "\n" +
+                    "размер матрицы = " + BlockTests.TestArrSizes[index] + "\n" +
                     "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
         }
     }

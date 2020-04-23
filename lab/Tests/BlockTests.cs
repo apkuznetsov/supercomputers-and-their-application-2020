@@ -4,6 +4,8 @@ namespace lab.Tests
 {
     public class BlockTests
     {
+        public static readonly int[] TestArrSizes = { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 };
+
         public static double[] TestIntBlockMethod(int testArrSize, int[] testBlockSizes)
         {
             double[] resultsInSecs = new double[testBlockSizes.Length];
