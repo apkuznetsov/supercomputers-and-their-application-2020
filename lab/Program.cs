@@ -1,4 +1,4 @@
-﻿using lab.Tests;
+using lab.Tests;
 using System;
 
 namespace lab
@@ -48,5 +48,18 @@ namespace lab
                     "размер матрицы = " + BlockTests.TestArrSizes[index] + "\n" +
                     "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
         }
+
+        private static void TestingDoubleBlockMethod()
+        {
+            const int blockSize = 1024;
+
+            Console.WriteLine("DOUBLE -- БЛОЧНОЕ ПЕРЕМНОЖЕНИЕ ДЛЯ БЛОКА РАЗМЕРОМ " + blockSize + ":\n");
+
+            double[] resultsInSecs = BlockTests.TestDoubleBlockMethod(blockSize, BlockTests.TestArrSizes);
+            for (int index = 0; index < BlockTests.TestArrSizes.Length; index++)
+                Console.WriteLine("измерение " + index + "\n" +
+                    "размер матрицы = " + BlockTests.TestArrSizes[index] + "\n" +
+                    "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
     }
+
 }
