@@ -1,4 +1,4 @@
-using lab.Tests;
+﻿using lab.Tests;
 using System;
 
 namespace lab
@@ -60,6 +60,19 @@ namespace lab
                 Console.WriteLine("измерение " + index + "\n" +
                     "размер матрицы = " + BlockTests.TestArrSizes[index] + "\n" +
                     "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
-    }
+        }
 
+        private static void TestingFloatBlockMethod()
+        {
+            const int blockSize = 1024;
+
+            Console.WriteLine("FLOAT -- БЛОЧНОЕ ПЕРЕМНОЖЕНИЕ ДЛЯ БЛОКА РАЗМЕРОМ " + blockSize + ":\n");
+
+            double[] resultsInSecs = BlockTests.TestFloatBlockMethod(blockSize, BlockTests.TestArrSizes);
+            for (int index = 0; index < BlockTests.TestArrSizes.Length; index++)
+                Console.WriteLine("измерение " + index + "\n" +
+                    "размер матрицы = " + BlockTests.TestArrSizes[index] + "\n" +
+                    "длительность расчёта = " + resultsInSecs[index] + " сек.\n");
+        }
+    }
 }
