@@ -1,4 +1,4 @@
-using lab.Tests;
+﻿using lab.Tests;
 using System;
 
 namespace lab
@@ -9,7 +9,7 @@ namespace lab
         {
             TestingClassicMethod();
             TestingTransposeMethod();
-            TestingBlockMethod();
+            //TestingBlockMethod();
 
             Console.ReadKey();
         }
