@@ -6,8 +6,8 @@ namespace lab
     {
         static void Main(string[] args)
         {
-            //TestingClassicMethod();
-            //TestingTransposeMethod();
+            TestingClassicMethod();
+            TestingTransposeMethod();
             TestingBlockMethod();
 
             Console.ReadKey();
@@ -41,7 +41,7 @@ namespace lab
 
             Console.WriteLine("БЛОЧНОЕ ПЕРЕМНОЖЕНИЕ ДЛЯ БЛОКА РАЗМЕРОМ " + blockSize + ":\n");
 
-            double[] resultsInSecs = Tests.TestBlockMethod(blockSize, Tests.TestBlockSizes);
+            double[] resultsInSecs = Tests.TestBlockMethod(blockSize, Tests.TestArrSizes);
             for (int index = 0; index < Tests.TestArrSizes.Length; index++)
                 Console.WriteLine("измерение " + index + "\n" +
                     "размер матрицы = " + Tests.TestArrSizes[index] + "\n" +
