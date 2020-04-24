@@ -16,16 +16,16 @@
     <Filter Include="Source Files\task2">
       <UniqueIdentifier>{4c64ff80-7120-4ef4-a6e4-979fbe8eeedc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\task2\task1">
+    <Filter Include="task1">
       <UniqueIdentifier>{41934a13-7935-4aa8-889e-3e886660f05a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test1.cpp">
-      <Filter>Source Files\task2\task1</Filter>
+      <Filter>task1</Filter>
     </ClCompile>
     <ClCompile Include="test2.cpp">
-      <Filter>Source Files\task2\task1</Filter>
+      <Filter>task1</Filter>
     </ClCompile>
     <ClCompile Include="static_creation.cpp">
       <Filter>Source Files\task2</Filter>
