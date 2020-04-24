@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+using namespace std;
+
 double generate_a() {
 	const double MIN = -3.14;
 	const double MAX = 3.14;
@@ -21,7 +23,21 @@ void calc_expressions() {
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	const int REPEAT_TIMES = 10000000;
+
+	const double MY_PROCESSOR_CLOCKS_PER_SEC = 1800000000;
+	unsigned __int64 time1;
+	unsigned __int64 time2;
+
+	time1 = __rdtsc();
+
+	for (int i = 0; i < REPEAT_TIMES; i++)
+		calc_expressions();
+
+	time2 = __rdtsc();
+
+	double time = (time2 - time1) / MY_PROCESSOR_CLOCKS_PER_SEC;
+	cout << "time = " << time << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
