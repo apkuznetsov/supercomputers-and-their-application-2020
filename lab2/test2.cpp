@@ -11,7 +11,7 @@
 
 using namespace std;
 
-int main()
+int main2()
 {
 	const int REPEAT_TIMES = 100000;
 
@@ -46,4 +46,6 @@ int main()
 
 	double time = (time2 - time1) / MY_PROCESSOR_CLOCKS_PER_SEC;
 	cout << "time = " << time << endl;
+
+	return 0;
 }

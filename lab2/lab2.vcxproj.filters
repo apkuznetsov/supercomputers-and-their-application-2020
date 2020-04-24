@@ -13,13 +13,25 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\task2">
+      <UniqueIdentifier>{4c64ff80-7120-4ef4-a6e4-979fbe8eeedc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\task2\task1">
+      <UniqueIdentifier>{41934a13-7935-4aa8-889e-3e886660f05a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="test1.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\task2\task1</Filter>
+    </ClCompile>
+    <ClCompile Include="test2.cpp">
+      <Filter>Source Files\task2\task1</Filter>
+    </ClCompile>
+    <ClCompile Include="static_creation.cpp">
+      <Filter>Source Files\task2</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamic_creation.cpp">
+      <Filter>Source Files\task2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
