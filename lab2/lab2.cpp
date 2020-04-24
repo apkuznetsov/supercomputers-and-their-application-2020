@@ -15,16 +15,17 @@
 using namespace std;
 
 double generate_a() {
-	const double MIN = -3.14;
-	const double MAX = 3.14;
+	return  (double)rand() / (double)RAND_MAX * (6.28);
+}
 
-	return  (double)rand() / (double)RAND_MAX * (MAX - MIN);
+double generate_x() {
+	return rand() % 100;
 }
 
 void calc_expressions() {
 	double a = generate_a();
-	double x = rand() % 100;
-	double y = rand() % 100;
+	double x = generate_x();
+	double y = generate_x();
 
 	double t1 = sin(a) * x + cos(a) * y;
 	double t2 = -cos(a) * x + sin(a) * y;
