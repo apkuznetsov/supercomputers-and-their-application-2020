@@ -2,6 +2,15 @@
 //
 
 #include <iostream>
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
+#include <windows.h>
+#include <time.h>
+#include <cstdlib>
+#include <iomanip>
+#pragma intrinsic(__rdtsc)
+#define _USE_MATH_DEFINES
 
 using namespace std;
 
