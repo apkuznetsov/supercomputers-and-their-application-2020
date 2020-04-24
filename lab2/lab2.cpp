@@ -10,6 +10,15 @@ double generate_a() {
 	return  (double)rand() / (double)RAND_MAX * (MAX - MIN);
 }
 
+void calc_expressions() {
+	double a = generate_a();
+	double x = rand() % 100;
+	double y = rand() % 100;
+
+	double t1 = sin(a) * x + cos(a) * y;
+	double t2 = -cos(a) * x + sin(a) * y;
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
