@@ -3,6 +3,13 @@
 
 #include <iostream>
 
+double generate_a() {
+	const double MIN = -3.14;
+	const double MAX = 3.14;
+
+	return  (double)rand() / (double)RAND_MAX * (MAX - MIN);
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
