@@ -23,14 +23,16 @@ void calc_expressions() {
 	double a = generate_a();
 	double x = generate_x();
 	double y = generate_x();
+	double sin_a = sin(a);
+	double cos_a = cos(a);
 
-	double t1 = sin(a) * x + cos(a) * y;
-	double t2 = -cos(a) * x + sin(a) * y;
+	double t1 = sin_a * x + cos_a * y;
+	double t2 = -cos_a * x + sin_a * y;
 }
 
 int main()
 {
-	const int REPEAT_TIMES = 10000000;
+	const int REPEAT_TIMES = 100000;
 
 	const double MY_PROCESSOR_CLOCKS_PER_SEC = 1800000000;
 	unsigned __int64 time1;
